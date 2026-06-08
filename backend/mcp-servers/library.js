@@ -1,10 +1,5 @@
-// ─────────────────────────────────────────────────────────────────────────────
-//  library.js  –  Mahatma Gandhi Central Library (MGCL), IIT Roorkee
-//  Books curated for B.Tech Chemical Engineering (5th Semester focus)
-// ─────────────────────────────────────────────────────────────────────────────
-
 const books = [
-  // ── Process Equipment Design (CHC-305) ──────────────────────────────────
+  
   {
     id: "B001",
     title: "Process Equipment Design",
@@ -48,7 +43,7 @@ const books = [
     similarIds: ["B001", "B002"],
   },
 
-  // ── Computer Applications in Chemical Engg (CHC-301) ────────────────────
+  
   {
     id: "B004",
     title: "Introduction to Chemical Engineering Computing",
@@ -92,7 +87,7 @@ const books = [
     similarIds: ["B004", "B005"],
   },
 
-  // ── Fundamentals of AI/ML (CHC-351) ─────────────────────────────────────
+  
   {
     id: "B007",
     title: "Artificial Intelligence: A Modern Approach",
@@ -136,7 +131,7 @@ const books = [
     similarIds: ["B007", "B008"],
   },
 
-  // ── Core Chemical Engg References (all semesters / 5th sem lab & general) ─
+  
   {
     id: "B010",
     title: "Coulson & Richardson's Chemical Engineering Vol. 1A: Fluid Flow",
@@ -194,7 +189,7 @@ const books = [
     similarIds: ["B010", "B011", "B012"],
   },
 
-  // ── Talent Enhancement / Process Modelling (CHT-I) ──────────────────────
+  
   {
     id: "B014",
     title: "Process Modelling and Simulation in Chemical, Biochemical and Environmental Engineering",
@@ -224,7 +219,7 @@ const books = [
     similarIds: ["B014", "B004"],
   },
 
-  // ── Digital / e-Resources ────────────────────────────────────────────────
+  
   {
     id: "B016",
     title: "Introduction to Chemical Engineering Thermodynamics",
@@ -241,7 +236,7 @@ const books = [
   },
 ];
 
-// ── Library status (MGCL, IIT Roorkee) ───────────────────────────────────────
+
 const libraryStatus = {
   name: "Mahatma Gandhi Central Library (MGCL)",
   institute: "IIT Roorkee",
@@ -278,7 +273,7 @@ const libraryStatus = {
   },
 };
 
-// ── Tool definitions ──────────────────────────────────────────────────────────
+
 export const libraryTools = [
   {
     name: "search_books",
@@ -334,7 +329,7 @@ export const libraryTools = [
   },
 ];
 
-// ── Tool executor ─────────────────────────────────────────────────────────────
+
 export function executeLibraryTool(toolName, toolInput) {
   switch (toolName) {
 

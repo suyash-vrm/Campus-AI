@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useMemo ,useState} from "react";
 
-// ─── Date & Time Helpers ─────────────────────────────────────────────────────
+
 const today = new Date();
 const displayDate = today.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }).toUpperCase();
 const dayOfWeek = today.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
 const hour = today.getHours();
 const greeting = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
 
-// ─── Semester Progress (Dynamic) ─────────────────────────────────────────────
-// Autumn 2026-27: Classes start 16 Jul 2026, last teaching day 11 Nov 2026
+
 const SEM_START = new Date("2026-07-16");
 const SEM_END   = new Date("2026-11-11");
 const MTE_START = new Date("2026-09-10");
@@ -38,34 +37,33 @@ function getSemesterProgress() {
   return { pct, week, totalWeeks: 17, phase, daysLeft };
 }
 
-// ─── Mess Menu (Weekly rotation — IIT Roorkee style) ─────────────────────────
-// dayOfWeek index: 0=Sun,1=Mon,...,6=Sat
+
 const MESS_MENU = {
-  0: { // Sunday
+  0: { 
     breakfast: ["Aloo Paratha", "Curd", "Pickle", "Tea / Coffee"],
     lunch:     ["Dal Makhani", "Paneer Butter Masala", "Jeera Rice", "Naan", "Salad", "Gulab Jamun"],
     snacks:    ["Samosa", "Chutney", "Tea"],
     dinner:    ["Rajma", "Mixed Veg", "Roti", "Steamed Rice", "Raita"],
   },
-  1: { // Monday
+  1: { 
     breakfast: ["Poha", "Boiled Egg / Banana", "Bread & Butter", "Tea / Coffee"],
     lunch:     ["Yellow Dal", "Aloo Gobhi", "Rice", "Roti", "Salad"],
     snacks:    ["Bread Pakora", "Ketchup", "Tea"],
     dinner:    ["Chole", "Bhindi Masala", "Roti", "Rice", "Dahi"],
   },
-  2: { // Tuesday
+  2: { 
     breakfast: ["Idli", "Sambar", "Coconut Chutney", "Tea / Coffee"],
     lunch:     ["Arhar Dal", "Palak Paneer", "Jeera Rice", "Roti", "Salad"],
     snacks:    ["Vada Pav", "Green Chutney", "Tea"],
     dinner:    ["Kadhi", "Aloo Matar", "Roti", "Rice", "Pickle"],
   },
-  3: { // Wednesday
+  3: { 
     breakfast: ["Upma", "Boiled Egg / Fruits", "Bread & Jam", "Tea / Coffee"],
     lunch:     ["Moong Dal", "Jeera Aloo", "Rice", "Roti", "Salad", "Kheer"],
     snacks:    ["Pav Bhaji", "Tea"],
     dinner:    ["Mix Dal", "Baingan Masala", "Roti", "Rice", "Buttermilk"],
   },
-  4: { // Thursday
+  4: { 
     breakfast: ["Puri", "Sabzi", "Curd", "Tea / Coffee"],
     lunch:     ["Masoor Dal", "Paneer Bhurji", "Rice", "Roti", "Salad"],
     snacks:    ["Kachori", "Imli Chutney", "Tea"],
@@ -109,7 +107,7 @@ const MEAL_COLORS = {
   dinner:    { bg: "linear-gradient(135deg,#6366f122,#818cf811)", accent: "#6366f1" },
 };
 
-// ─── Today's Events (from Autumn 2026-27 calendar) ────────────────────────────
+
 const ALL_EVENTS_FLAT = [
   { date: "2026-07-14", title: "Ph.D. & M.Tech Admission Registration", time: "All Day", loc: "Academic Block", tag: "ACADEMIC" },
   { date: "2026-07-15", title: "Orientation — New Ph.D. & Masters", time: "10:00 AM", loc: "Convocation Hall", tag: "ACADEMIC" },
@@ -171,7 +169,7 @@ const TAG_META = {
   CONFERENCE: { color: "#ea580c", bg: "#ea580c22" },
 };
 
-// ─── Academic Hub Links ──────────────────────────────────────────────────────
+
 const ACADEMIC_LINKS = [
   { label: "Channel-i (ERP Portal)", url: "https://channeli.in", desc: "Courses, grades, attendance", icon: "🎓" },
   { label: "Attendance Portal", url: "https://attendance.iitr.ac.in:8000/#/dashboard", desc: "View & track attendance", icon: "📋" },
@@ -181,7 +179,7 @@ const ACADEMIC_LINKS = [
   { label: "Faculty Research Portal", url: "https://iitr.ac.in/Departments/Computer%20Science%20and%20Engineering%20Department/Research/Research%20Area.html", desc: "Grants, publications", icon: "🔬" },
 ];
 
-// ─── Library Stats ────────────────────────────────────────────────────────────
+
 const libStats = [
   { label: "Available Seats", value: "142", sub: "/ 400 total" },
   { label: "Book Returns Due", value: "03", sub: "Action Required", isWarn: true },
@@ -201,10 +199,10 @@ function StatCard({ label, value, sub, isWarn, isGood }) {
   );
 }
 
-// ─── Meal Icon ───────────────────────────────────────────────────────────────
+
 const MEAL_ICONS = { breakfast: "🌅", lunch: "☀️", snacks: "🍵", dinner: "🌙" };
 
-// ─── Main Component ──────────────────────────────────────────────────────────
+
 export default function Dashboard() {
   const { user } = useAuth();
   const displayName = user?.name || "Student";

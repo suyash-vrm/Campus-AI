@@ -14,9 +14,7 @@ function signToken(user) {
   );
 }
 
-// ─────────────────────────────────────────────
-// POST /api/auth/register
-// ─────────────────────────────────────────────
+
 router.post("/register", async (req, res) => {
   const { name, email, password, role = "student", department } = req.body;
 
@@ -61,9 +59,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// ─────────────────────────────────────────────
-// POST /api/auth/login
-// ─────────────────────────────────────────────
+
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -95,9 +91,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// ─────────────────────────────────────────────
-// GET /api/auth/me  — verify token & get user
-// ─────────────────────────────────────────────
+
 router.get("/me", (req, res) => {
   const authHeader = req.headers.authorization;
   if (!authHeader?.startsWith("Bearer ")) {

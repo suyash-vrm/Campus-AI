@@ -78,7 +78,7 @@ export default function Register() {
   return (
     <div style={{ display: "flex", height: "100vh", overflow: "hidden", fontFamily: "var(--font)" }}>
 
-      {/* ── Left: Dark branded panel ─────────────── */}
+      
       <div style={{
         width: "38%", background: "#111111", display: "flex", flexDirection: "column",
         justifyContent: "space-between", padding: "48px 44px", color: "white", position: "relative", overflow: "hidden"
@@ -88,7 +88,7 @@ export default function Register() {
 
         <div>
           <div style={{ fontSize: "22px", fontWeight: 800, letterSpacing: "-0.5px", marginBottom: "6px" }}>Campus Intelligence</div>
-          <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Unified Campus Intelligence Portal</div>
+          <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Unified IITR Campus Intelligence Portal</div>
         </div>
 
         <div>
@@ -99,10 +99,10 @@ export default function Register() {
             Your entire campus<br />in one dashboard.
           </h2>
           <p style={{ fontSize: "13.5px", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: "30px" }}>
-            Register with your university email to get full access to the AI-powered campus intelligence portal.
+            Register with your college email to get full access to the campus intelligence portal.
           </p>
 
-          {/* Benefits */}
+          
           {[
             "🔐 Secure JWT authentication",
             "🤖 AI-powered campus assistant",
@@ -117,7 +117,7 @@ export default function Register() {
         </div>
 
         <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>
-          © 2024 Unified Campus University
+          © 2026 IITR Campus Intelligence
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export default function Register() {
               Create your account
             </h1>
             <p style={{ fontSize: "14px", color: "var(--text-secondary)" }}>
-              Use your university email to register
+              Use your college email to register
             </p>
           </div>
 
@@ -148,7 +148,7 @@ export default function Register() {
           )}
 
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            {/* Name + Role (2 columns) */}
+            
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
               <div>
                 <label style={labelStyle}>Full Name</label>
@@ -185,7 +185,7 @@ export default function Register() {
               </select>
             </div>
 
-            {/* Password fields (2 columns) */}
+            
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
               <div>
                 <label style={labelStyle}>Password</label>

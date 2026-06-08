@@ -32,7 +32,7 @@ export function createUser({ name, email, password, role = "student", department
     id: db.nextId++,
     name,
     email: email.toLowerCase(),
-    password, // already hashed before calling this
+    password, 
     role,
     department,
     createdAt: new Date().toISOString(),

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AIPanel from "../components/AIPanel";
 
-// ─── IIT Roorkee Academic Documents ────────────────────────────────────────
+
 const documents = [
   { id: "DOC001", title: "Academic Calendar Autumn 2026-27", category: "ACADEMIC", pages: 2 },
   { id: "DOC002", title: "Conduct & Ethics Policy", category: "ADMINISTRATION", pages: 48 },
@@ -57,9 +57,9 @@ All sponsored research projects must be registered within 30 days of funding app
   },
 };
 
-// ─── All Events (Academic + Workshops + Conferences) ────────────────────────
+
 const ALL_EVENTS = [
-  // ── Academic Calendar Events ──────────────────────────────────────────────
+  
   { date: "2026-07-14", month: "JUL", day: "14", title: "Ph.D. & M.Tech Admission Registration", meta: "Academic Block • All Day", tag: "ACADEMIC", color: "#3b82f6" },
   { date: "2026-07-15", month: "JUL", day: "15", title: "Orientation — New Ph.D. & Masters Students", meta: "Convocation Hall • 10:00 AM", tag: "ACADEMIC", color: "#3b82f6" },
   { date: "2026-07-16", month: "JUL", day: "16", title: "Classes Commence (All except UG I Year)", meta: "Campus-wide • 8:00 AM", tag: "ACADEMIC", color: "#3b82f6" },

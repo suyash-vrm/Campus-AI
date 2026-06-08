@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import AIPanel from "../components/AIPanel";
 
-// ── Sidebar data – updated for MGCL IIT Roorkee & Chem Engg 5th sem ─────────
+
 const recentQueries = [
   { text: '"Process Equipment Design" – Joshi', time: "1h ago",    source: "Chemical Engg Archive" },
   { text: '"Coulson & Richardson Vol. 1A"',      time: "Yesterday", source: "STEM Reference"        },
@@ -16,7 +16,6 @@ const libraryStatusData = [
   { name: "STEM Reference Section", badge: "AVAILABLE",     badgeType: "green"  },
 ];
 
-// ── Icons ─────────────────────────────────────────────────────────────────────
 const IconSend = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>

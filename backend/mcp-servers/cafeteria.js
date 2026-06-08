@@ -1,7 +1,4 @@
-// MCP Server: IIT Roorkee Cafeteria
-// Covers all Bhawan messes + campus canteens
-// Real menu data from Ravindra Bhawan & Azad Bhawan (user-provided)
-// Realistic data for other bhawans based on typical IITR mess patterns
+
 
 const DAILY_ITEMS = {
   breakfast: ["White & Brown Bread", "Sprouts", "Milk/Dahi/Tea/Coffee", "Bournvita (250ml)", "Butter/Peanut Butter", "Banana/Egg-1 & Jam", "Cornflakes", "Oats"],
@@ -9,13 +6,10 @@ const DAILY_ITEMS = {
   dinner: ["Butter Chapati", "Plain Rice", "Salad", "Pickle", "Green Chilli", "Fried Lemon"],
 };
 
-// ─────────────────────────────────────────
-// BHAWAN MESS DATA
-// ─────────────────────────────────────────
 
 const bhawans = {
 
-  // ── BOYS HOSTELS ──────────────────────
+  
 
   ravindra: {
     id: "ravindra",
@@ -67,7 +61,7 @@ const bhawans = {
     name: "Azad Bhawan",
     type: "boys",
     messTimings: { breakfast: "7:30 AM - 9:30 AM", lunch: "11:00 AM - 2:30 PM", dinner: "7:00 PM - 9:30 PM" },
-    // Real data from user-uploaded photo (01-06-2026 to 07-06-2026)
+    
     weeklyMenu: {
       monday: {
         breakfast: ["Fried/Soup Maggi", "Tomato Sauce", "Oats", "Corn Mix Sprout", ...DAILY_ITEMS.breakfast],
@@ -292,7 +286,7 @@ const bhawans = {
     },
   },
 
-  // ── GIRLS HOSTELS ──────────────────────
+  
 
   kasturba: {
     id: "kasturba",
@@ -343,7 +337,7 @@ const bhawans = {
     },
   },
 
-  // ── CO-ED HOSTEL ──────────────────────
+  
 
   vigyan_kunj: {
     id: "vigyan_kunj",
@@ -363,9 +357,6 @@ const bhawans = {
   },
 };
 
-// ─────────────────────────────────────────
-// CAMPUS CANTEENS
-// ─────────────────────────────────────────
 
 const canteens = {
   thomso_canteen: {
@@ -425,9 +416,6 @@ const canteens = {
   },
 };
 
-// ─────────────────────────────────────────
-// TOOL DEFINITIONS
-// ─────────────────────────────────────────
 
 export const cafeteriaTools = [
   {
@@ -492,9 +480,7 @@ export const cafeteriaTools = [
   },
 ];
 
-// ─────────────────────────────────────────
-// TOOL EXECUTOR
-// ─────────────────────────────────────────
+
 
 const DAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 

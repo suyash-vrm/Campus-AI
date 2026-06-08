@@ -5,7 +5,7 @@ const dateStr = today.toLocaleDateString("en-US", { weekday: "long", month: "lon
 const DAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 const todayName = DAYS[today.getDay()];
 
-// ── Real IIT Roorkee mess data (from actual menu boards) ──────────────────
+
 
 const DAILY_ITEMS = {
   breakfast: ["White & Brown Bread", "Sprouts", "Milk/Dahi/Tea/Coffee", "Cornflakes", "Butter/Peanut Butter", "Banana"],
@@ -34,7 +34,7 @@ const weeklyMenus = {
   },
 };
 
-// Other bhawans with representative menus
+
 const otherBhawans = {
   Rajendra: { monday: { lunch: ["Dal Makhani", "Aloo Gobi", "Rice", "Roti", "Raita"], dinner: ["Rajma", "Rice", "Roti", "Mix Veg", "Gulab Jamun"] }, tuesday: { lunch: ["Chole", "Bhature", "Rice", "Mix Veg", "Lassi"], dinner: ["Dal Tadka", "Jeera Rice", "Paneer Sabji", "Roti", "Kheer"] }, wednesday: { lunch: ["Arhar Dal", "Bhindi", "Rice", "Roti", "Chaas"], dinner: ["Kadhai Paneer/Chicken Curry", "Dal", "Rice", "Roti", "Ice Cream"] }, thursday: { lunch: ["Moong Dal", "Aloo Matar", "Rice", "Roti", "Shikanji"], dinner: ["Chana Masala", "Rice", "Roti", "Halwa"] }, friday: { lunch: ["Dal Fry", "Pulao", "Roti", "Mix Sabzi", "Raita"], dinner: ["Paneer Tikka/Egg Keema", "Rice", "Naan", "Dal", "Ladoo"] }, saturday: { lunch: ["Biryani", "Raita", "Salan", "Salad"], dinner: ["Dal Arhar", "Fried Rice", "Hakka Noodles", "Manchurian", "Vanilla Ice Cream"] }, sunday: { lunch: ["Special Sunday Thali"], dinner: ["Paneer Biryani/Chicken Biryani", "Dal Makhni", "Raita", "Moong Halwa"] } },
   Kasturba: { monday: { lunch: ["Dal Tadka", "Mix Veg", "Jeera Rice", "Roti", "Boondi Raita"], dinner: ["Rajma", "Rice", "Roti", "Aloo Jeera", "Gulab Jamun"] }, tuesday: { lunch: ["Chole", "Bhature", "Mix Veg", "Lassi"], dinner: ["Dal Makhani", "Roti", "Rice", "Palak Paneer", "Kheer"] }, wednesday: { lunch: ["Arhar Dal", "Bhindi", "Rice", "Roti", "Chaas"], dinner: ["Kadhai Paneer", "Dal", "Rice", "Roti", "Halwa"] }, thursday: { lunch: ["Moong Dal", "Aloo Matar", "Rice", "Roti", "Shikanji"], dinner: ["Chana Masala", "Rice", "Roti", "Boondi Raita", "Ice Cream"] }, friday: { lunch: ["Dal Fry", "Pulao", "Roti", "Mix Sabji", "Raita"], dinner: ["Shahi Paneer", "Rice", "Naan", "Dal", "Rasgulla"] }, saturday: { lunch: ["Veg Biryani", "Raita", "Salad"], dinner: ["Malai Kofta", "Naan", "Dal", "Gajar Halwa"] }, sunday: { lunch: ["Special Thali"], dinner: ["Paneer/Chicken Biryani", "Dal Makhni", "Raita", "Ice Cream"] } },
@@ -247,7 +247,7 @@ export default function Cafeteria() {
           suggestions={aiSuggestions}
         />
 
-        {/* Bhawan Quick Reference */}
+        
         <div style={{ padding: "14px 16px", borderTop: "1px solid var(--border)", background: "var(--bg-sidebar)" }}>
           <div style={{ fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.7px", color: "var(--text-muted)", marginBottom: "10px" }}>
             All Bhawans

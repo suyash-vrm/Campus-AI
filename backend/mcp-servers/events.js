@@ -1,12 +1,5 @@
-// MCP Server: IIT Roorkee Events
-// Academic Calendar (Autumn 2026-27) + Campus Events + Workshops + Fests
-
-// ─────────────────────────────────────────
-// ACADEMIC CALENDAR (Real data from official PDF)
-// ─────────────────────────────────────────
-
 const academicCalendar = [
-  // Registration & Classes
+  
   { id: "ac001", title: "PhD & Masters Registration", date: "2026-07-14", endDate: "2026-07-15", type: "academic", category: "registration", description: "Admission cum Academic Registration for new Ph.D. and Masters students", day: "Tuesday - Wednesday", important: true },
   { id: "ac002", title: "Orientation - PhD & Masters", date: "2026-07-15", type: "academic", category: "orientation", description: "Orientation Program for new Ph.D. and Masters students", day: "Wednesday" },
   { id: "ac003", title: "Classes Begin (except UG I year)", date: "2026-07-16", type: "academic", category: "classes", description: "Commencement of Classes for all programs except UG first year", day: "Thursday", important: true },
@@ -19,17 +12,17 @@ const academicCalendar = [
   { id: "ac010", title: "Last Date: Mandatory Documents", date: "2026-08-27", type: "academic", category: "deadline", description: "Last date for submission of mandatory documents for newly admitted students", day: "Thursday" },
   { id: "ac011", title: "Convocation 2026", date: "2026-09-19", type: "fest", category: "convocation", description: "Convocation 2026 (Final date to be notified - either Sep 19 or Sep 26)", day: "Saturday", important: true, altDate: "2026-09-26" },
 
-  // Mid Term
+ 
   { id: "ac012", title: "Mid-Term Examinations (MTE)", date: "2026-09-10", endDate: "2026-09-15", type: "exam", category: "exam", description: "Mid-Term Examinations for Autumn Semester 2026-27 (except Sunday)", day: "Thursday - Tuesday", important: true },
   { id: "ac013", title: "Last Date: MTE Performance Intimation", date: "2026-09-28", type: "academic", category: "deadline", description: "Last date for informing students about performance in MTE and internal assessment", day: "Monday" },
   { id: "ac014", title: "Feedback Form I", date: "2026-09-28", endDate: "2026-10-01", type: "academic", category: "feedback", description: "Submission of feedback/response form - I on the online portal", day: "Monday - Thursday" },
 
-  // Fests & Events
+  
   { id: "ac015", title: "Sangram 2026", date: "2026-10-03", endDate: "2026-10-04", type: "fest", category: "sports", description: "Sangram 2026 — Annual Sports Meet of IIT Roorkee", day: "Saturday - Sunday", important: true },
   { id: "ac016", title: "Last Date: Course Withdrawal", date: "2026-10-05", type: "academic", category: "deadline", description: "Last date for withdrawal of courses", day: "Monday" },
   { id: "ac017", title: "Thomso 2026", date: "2026-10-23", endDate: "2026-10-25", type: "fest", category: "cultural", description: "Thomso 2026 — Annual Cultural & Technical Festival of IIT Roorkee", day: "Friday - Sunday", important: true },
 
-  // End Term
+  
   { id: "ac018", title: "Feedback Form II", date: "2026-11-05", endDate: "2026-11-11", type: "academic", category: "feedback", description: "Submission of feedback/response form - II on the online portal", day: "Thursday - Wednesday" },
   { id: "ac019", title: "Last Date of Teaching", date: "2026-11-11", type: "academic", category: "classes", description: "Last date of teaching for Autumn Semester 2026-27", day: "Wednesday", important: true },
   { id: "ac020", title: "End-Term Examinations (ETE)", date: "2026-11-13", endDate: "2026-11-24", type: "exam", category: "exam", description: "End Term Examinations (excluding Sunday and declared holidays)", day: "Friday - Tuesday", important: true },
@@ -44,16 +37,12 @@ const academicCalendar = [
   { id: "ac029", title: "Branch Change Online Choices", date: "2026-12-10", endDate: "2026-12-14", type: "academic", category: "registration", description: "Online Choices for branch change", day: "Thursday - Monday" },
   { id: "ac030", title: "Branch Change Final List", date: "2026-12-31", type: "academic", category: "registration", description: "Declaration of the final list of branch change (Tentative)", day: "Thursday" },
 
-  // Spring Semester Start
+  
   { id: "ac031", title: "New PhD Registration (Spring)", date: "2027-01-07", type: "academic", category: "registration", description: "Admission cum Academic Registration for New Ph.D. Students", day: "Thursday" },
   { id: "ac032", title: "Spring Semester Registration", date: "2027-01-07", endDate: "2027-01-08", type: "academic", category: "registration", description: "Academic registration of all existing students for Spring Semester 2026-27", day: "Thursday - Friday" },
   { id: "ac033", title: "Spring Semester Classes Begin", date: "2027-01-11", type: "academic", category: "classes", description: "Commencement of classes for Spring Semester 2026-27", day: "Monday", important: true },
   { id: "ac034", title: "Re-exam (Autumn Sem 2026-27)", date: "2027-01-11", endDate: "2027-01-13", type: "exam", category: "exam", description: "Re-examination and Second examination for Autumn Semester 2026-27", day: "Monday - Wednesday" },
 ];
-
-// ─────────────────────────────────────────
-// HOLIDAYS
-// ─────────────────────────────────────────
 
 const holidays = [
   { title: "Independence Day", date: "2026-08-15", day: "Saturday" },
@@ -69,9 +58,6 @@ const holidays = [
   { title: "Christmas Day", date: "2026-12-25", day: "Friday" },
 ];
 
-// ─────────────────────────────────────────
-// TIMETABLE CHANGES
-// ─────────────────────────────────────────
 
 const timetableChanges = [
   { date: "2026-09-23", day: "Wednesday", follows: "Friday's Timetable", type: "rescheduling" },
@@ -82,12 +68,9 @@ const timetableChanges = [
   { date: "2026-10-10", day: "Saturday", follows: "Friday's Timetable", type: "compensatory", note: "UG I year only" },
 ];
 
-// ─────────────────────────────────────────
-// CAMPUS EVENTS (Workshops, Conferences, Club Events)
-// ─────────────────────────────────────────
 
 const campusEvents = [
-  // Technical / Workshop Events
+  
   { id: "ev001", title: "HackRush 2026", date: "2026-07-19", endDate: "2026-07-20", type: "technical", category: "hackathon", organizer: "Computer Science Society (CSS)", venue: "Main Building + CS Labs", description: "Annual 24-hour hackathon. Build innovative solutions for real-world problems. Prizes worth ₹1,50,000.", registrationOpen: true, registrationDeadline: "2026-07-15", maxParticipants: 200, registeredCount: 143, tags: ["coding", "hackathon", "prizes"], contact: "css@iitr.ac.in" },
   { id: "ev002", title: "AI/ML Workshop: Building with LLMs", date: "2026-07-22", type: "workshop", category: "technical", organizer: "AI Club, IITR", venue: "Seminar Hall, Biotechnology Block", description: "Hands-on workshop on building applications with Large Language Models. Bring your laptop. Covers RAG, tool use, agents.", registrationOpen: true, registrationDeadline: "2026-07-21", maxParticipants: 60, registeredCount: 47, tags: ["AI", "ML", "LLM", "workshop"], contact: "aiclub@iitr.ac.in" },
   { id: "ev003", title: "Open Source Contribution Drive", date: "2026-07-25", type: "workshop", category: "technical", organizer: "Developer Student Club (DSC), IITR", venue: "Computer Lab 3, CS Block", description: "Learn how to contribute to open source projects. Git workflow, PR process, issue tracking. Beginner friendly.", registrationOpen: true, registrationDeadline: "2026-07-24", maxParticipants: 50, registeredCount: 23, tags: ["open source", "git", "github", "coding"], contact: "dsc@iitr.ac.in" },
@@ -98,27 +81,24 @@ const campusEvents = [
   { id: "ev008", title: "Startup Pitch Competition — IIT Roorkee E-Cell", date: "2026-08-22", type: "technical", category: "entrepreneurship", organizer: "Entrepreneurship Cell (E-Cell), IITR", venue: "Convocation Hall", description: "Annual startup pitch competition. ₹2 lakh seed funding for winner. Open to all students. Teams of 2-5.", registrationOpen: true, registrationDeadline: "2026-08-18", maxParticipants: 50, registeredCount: 28, tags: ["startup", "entrepreneurship", "pitch", "funding"], contact: "ecell@iitr.ac.in" },
   { id: "ev009", title: "Data Science Hackathon — Cognizance Junior", date: "2026-09-05", endDate: "2026-09-06", type: "technical", category: "hackathon", organizer: "Cognizance Team, IITR", venue: "Computer Labs, CS Block", description: "Data Science and ML focused hackathon. Real-world dataset provided on the day. Teams of 2-3.", registrationOpen: true, registrationDeadline: "2026-09-01", maxParticipants: 120, registeredCount: 96, tags: ["data science", "ML", "hackathon", "cognizance"], contact: "cognizance@iitr.ac.in" },
 
-  // Cultural Events
+  
   { id: "ev010", title: "Freshers' Night 2026", date: "2026-08-05", type: "cultural", category: "cultural", organizer: "Cultural Council, IITR", venue: "Open Air Theatre (OAT)", description: "Welcome night for the batch of 2026. Music, dance, comedy performances. Entry free for freshers.", registrationOpen: false, registrationDeadline: null, maxParticipants: 2000, registeredCount: 2000, tags: ["freshers", "cultural", "music", "welcome"], contact: "cultural@iitr.ac.in" },
   { id: "ev011", title: "Nukkad Natak Festival", date: "2026-08-20", type: "cultural", category: "cultural", organizer: "Dramatics Section, IITR", venue: "Campus Grounds", description: "Street play festival. Open participation. Social awareness themes. Judged by faculty panel.", registrationOpen: true, registrationDeadline: "2026-08-18", maxParticipants: 150, registeredCount: 89, tags: ["drama", "nukkad", "street play", "cultural"], contact: "drama@iitr.ac.in" },
   { id: "ev012", title: "Inter-Bhawan Music Competition", date: "2026-09-08", type: "cultural", category: "music", organizer: "Music Section, IITR", venue: "Open Air Theatre (OAT)", description: "Annual inter-bhawan music competition. Singing, instruments, bands. Represent your Bhawan.", registrationOpen: true, registrationDeadline: "2026-09-05", maxParticipants: 200, registeredCount: 134, tags: ["music", "inter-bhawan", "singing", "cultural"], contact: "music@iitr.ac.in" },
   { id: "ev013", title: "Photography Contest — Lens & Light", date: "2026-09-15", type: "cultural", category: "photography", organizer: "Photography Section, IITR", venue: "Online Submission", description: "Annual campus photography contest. Theme: 'Campus Life'. Submit your best shots. Prizes for top 5.", registrationOpen: true, registrationDeadline: "2026-09-10", maxParticipants: 500, registeredCount: 312, tags: ["photography", "contest", "art"], contact: "photography@iitr.ac.in" },
 
-  // Sports Events
+  
   { id: "ev014", title: "Inter-IIT Sports Meet — Selection Trials", date: "2026-07-30", endDate: "2026-08-01", type: "sports", category: "sports", organizer: "Sports Council, IITR", venue: "Sports Complex", description: "Selection trials for Inter-IIT Sports Meet 2026. Open to all students. Sports: Cricket, Football, Basketball, Badminton, Athletics, Chess.", registrationOpen: true, registrationDeadline: "2026-07-28", maxParticipants: 500, registeredCount: 378, tags: ["sports", "inter-IIT", "cricket", "football", "basketball"], contact: "sports@iitr.ac.in" },
   { id: "ev015", title: "Intra-Campus Football League", date: "2026-08-15", endDate: "2026-08-30", type: "sports", category: "football", organizer: "Football Club, IITR", venue: "Football Ground", description: "Annual intra-campus football league. Teams represent each Bhawan. Round-robin format. Register your Bhawan team.", registrationOpen: true, registrationDeadline: "2026-08-10", maxParticipants: 200, registeredCount: 143, tags: ["football", "bhawan", "sports", "league"], contact: "football@iitr.ac.in" },
   { id: "ev016", title: "Badminton Tournament — Smash Cup", date: "2026-09-20", endDate: "2026-09-22", type: "sports", category: "badminton", organizer: "Badminton Club, IITR", venue: "Sports Complex — Badminton Courts", description: "Annual badminton tournament. Singles and doubles categories. Open to all students.", registrationOpen: true, registrationDeadline: "2026-09-15", maxParticipants: 128, registeredCount: 94, tags: ["badminton", "sports", "tournament"], contact: "badminton@iitr.ac.in" },
 
-  // Conferences & Seminars
+  
   { id: "ev017", title: "National Conference on Sustainable Engineering", date: "2026-09-12", endDate: "2026-09-13", type: "conference", category: "conference", organizer: "Civil Engineering Dept, IITR", venue: "Convocation Hall + Seminar Rooms", description: "Two-day national conference on sustainable infrastructure and green engineering. Paper presentations, keynotes.", registrationOpen: true, registrationDeadline: "2026-08-31", maxParticipants: 300, registeredCount: 245, tags: ["conference", "civil", "sustainable", "research"], contact: "civil.conf@iitr.ac.in" },
   { id: "ev018", title: "Industry Talk — Google on Careers in AI", date: "2026-08-12", type: "seminar", category: "placement", organizer: "Placement Cell, IITR", venue: "Lecture Theatre — 1, Main Building", description: "Guest lecture by Google engineers on careers in AI/ML and software development. Q&A session included.", registrationOpen: true, registrationDeadline: "2026-08-11", maxParticipants: 400, registeredCount: 390, tags: ["google", "placement", "AI", "career", "industry talk"], contact: "placement@iitr.ac.in" },
   { id: "ev019", title: "TEDx IIT Roorkee 2026", date: "2026-10-12", type: "seminar", category: "conference", organizer: "TEDx IITR", venue: "Convocation Hall", description: "Annual TEDx IIT Roorkee event. Theme: 'Reimagine'. 10 speakers from tech, policy, arts, science.", registrationOpen: true, registrationDeadline: "2026-10-05", maxParticipants: 500, registeredCount: 421, tags: ["TEDx", "talks", "inspiration", "conference"], contact: "tedx@iitr.ac.in" },
   { id: "ev020", title: "Mock Placement Interviews", date: "2026-10-15", endDate: "2026-10-16", type: "seminar", category: "placement", organizer: "Placement Cell + Senior Students", venue: "CS Department", description: "Mock technical interviews and HR rounds. Get feedback from seniors placed at top companies. Free for all.", registrationOpen: true, registrationDeadline: "2026-10-10", maxParticipants: 200, registeredCount: 167, tags: ["placement", "interview", "mock", "career"], contact: "placement@iitr.ac.in" },
 ];
 
-// ─────────────────────────────────────────
-// TOOL DEFINITIONS
-// ─────────────────────────────────────────
 
 export const eventsTools = [
   {
@@ -201,9 +181,7 @@ export const eventsTools = [
   },
 ];
 
-// ─────────────────────────────────────────
-// TOOL EXECUTOR
-// ─────────────────────────────────────────
+
 
 const MONTH_MAP = { january: 0, february: 1, march: 2, april: 3, may: 4, june: 5, july: 6, august: 7, september: 8, october: 9, november: 10, december: 11 };
 

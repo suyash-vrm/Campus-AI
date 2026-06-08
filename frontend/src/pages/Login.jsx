@@ -42,7 +42,7 @@ export default function Login() {
     }
   }
 
-  // Quick-fill demo credentials
+  
   function fillDemo() {
     setForm({ email: "demo@campus.edu", password: "demo123" });
     setError("");
@@ -51,31 +51,31 @@ export default function Login() {
   return (
     <div style={{ display: "flex", height: "100vh", overflow: "hidden", fontFamily: "var(--font)" }}>
 
-      {/* ── Left: Dark branded panel ─────────────── */}
+      {}
       <div style={{
         width: "42%", background: "#111111", display: "flex", flexDirection: "column",
         justifyContent: "space-between", padding: "48px 44px", color: "white", position: "relative", overflow: "hidden"
       }}>
-        {/* Background decoration */}
+        
         <div style={{ position: "absolute", top: "-60px", right: "-60px", width: "300px", height: "300px", borderRadius: "50%", background: "rgba(240,192,48,0.06)" }} />
         <div style={{ position: "absolute", bottom: "40px", left: "-40px", width: "200px", height: "200px", borderRadius: "50%", background: "rgba(240,192,48,0.04)" }} />
 
-        {/* Logo */}
+        
         <div>
           <div style={{ fontSize: "22px", fontWeight: 800, letterSpacing: "-0.5px", marginBottom: "6px" }}>Campus Intelligence</div>
-          <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Unified Campus Intelligence Portal</div>
+          <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>Unified IITR Intelligence Portal</div>
         </div>
 
-        {/* Center content */}
+        
         <div>
           <div style={{ fontSize: "13px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", color: "var(--accent-yellow)", marginBottom: "16px" }}>
-            Powered by MCP + AI
+            your go to portal.
           </div>
           <h2 style={{ fontSize: "30px", fontWeight: 800, lineHeight: 1.25, marginBottom: "24px", letterSpacing: "-0.5px" }}>
             Everything campus.<br />All in one place.
           </h2>
           <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.55)", lineHeight: 1.7, marginBottom: "36px", maxWidth: "320px" }}>
-            Access library books, cafeteria menus, campus events, and academic resources — all powered by independent AI-driven MCP servers.
+            Access library books, cafeteria menus, campus events, and academic resources — all at one place.
           </p>
 
           {/* Feature list */}
@@ -101,11 +101,11 @@ export default function Login() {
 
         {/* Footer */}
         <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>
-          © 2024 Unified Campus University
+          © 2026 IITR Campus Intelligence
         </div>
       </div>
 
-      {/* ── Right: Login form ────────────────────── */}
+      
       <div style={{
         flex: 1, background: "var(--bg-main)", display: "flex", alignItems: "center",
         justifyContent: "center", padding: "40px"

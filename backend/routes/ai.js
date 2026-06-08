@@ -38,7 +38,7 @@ const toolsForAI = allTools.map(({ _server, ...rest }) => ({
   },
 }));
 
-const SYSTEM_PROMPT = `You are CampusAI, an intelligent assistant for university students and faculty at Unified Campus University.
+const SYSTEM_PROMPT = `You are CampusAI, an intelligent assistant for university students and faculty .
 You have access to real-time data from five campus systems:
 1. Library MCP - book availability, search, physical location, library status, seat counts
 2. Events MCP - upcoming events, workshops, hackathons, seminars, registration

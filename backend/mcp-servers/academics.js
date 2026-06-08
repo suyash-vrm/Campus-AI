@@ -1,8 +1,3 @@
-// ─────────────────────────────────────────────────────────────────────────────
-//  academics.js  –  5th Semester B.Tech Chemical Engineering, IIT Roorkee
-// ─────────────────────────────────────────────────────────────────────────────
-
-// ── Documents / Handbooks ─────────────────────────────────────────────────────
 const documents = [
   {
     id: "DOC001",
@@ -146,7 +141,7 @@ const documents = [
   },
 ];
 
-// ── Dynamic semester progress ─────────────────────────────────────────────────
+// ── Dynamic semester progress 
 const SEMESTER_START = new Date("2026-07-16");
 const SEMESTER_END   = new Date("2026-11-11");
 const TOTAL_WEEKS    = 16;
@@ -167,7 +162,7 @@ function computeSemesterProgress() {
   return { currentWeek, totalWeeks: TOTAL_WEEKS, progressPercent, phase };
 }
 
-// ── 5th Semester courses ──────────────────────────────────────────────────────
+// ── 5th Semester courses 
 const semesterFiveCourses = [
   { code: "HSSEC-II",  title: "HSS Elective Course",                          area: "HSSEC", credits: 3,  L: 3, T: 0, P: 0, type: "Elective"    },
   { code: "OEC-III",   title: "Open Elective Course",                          area: "OEC",   credits: 4,  L: 3, T: 1, P: 0, type: "Elective"    },
@@ -179,7 +174,7 @@ const semesterFiveCourses = [
   { code: "CHC-399",   title: "Community Outreach",                             area: "CORE",  credits: 2,  L: 0, T: 0, P: 0, type: "Core"        },
 ];
 
-// ── Academic schedule ─────────────────────────────────────────────────────────
+// ── Academic schedule 
 const academicSchedule = {
   currentSemester: "5th Semester – Autumn 2026",
   program: "B.Tech Chemical Engineering",
@@ -257,7 +252,7 @@ export const academicsTools = [
   },
 ];
 
-// ── Tool executor ─────────────────────────────────────────────────────────────
+// ── Tool executor
 export function executeAcademicsTool(toolName, toolInput) {
   switch (toolName) {
 

@@ -1,6 +1,6 @@
 import AIPanel from "../components/AIPanel";
 
-// ── 5th Semester: Year III Autumn – B.Tech Chemical Engineering, IIT Roorkee ──
+
 const courses = [
   { code: "HSSEC-II", title: "HSS Elective Course",                         area: "HSSEC", credits: 3,  type: "Elective",   L: 3, T: 0, P: 0 },
   { code: "OEC-III",  title: "Open Elective Course",                         area: "OEC",   credits: 4,  type: "Elective",   L: 3, T: 1, P: 0 },
@@ -14,7 +14,7 @@ const courses = [
 
 const totalCredits = courses.reduce((s, c) => s + c.credits, 0); // 22
 
-// ── Dynamic semester progress (based on current date vs semester window) ──
+
 const SEMESTER_START = new Date("2026-07-16");
 const SEMESTER_END   = new Date("2026-11-11");
 const TOTAL_WEEKS    = 16;
@@ -37,7 +37,7 @@ function getSemesterProgress() {
 
 const { currentWeek, pct, phase } = getSemesterProgress();
 
-// ── Quick links (placeholder Drive URLs) ──
+
 const quickLinks = [
   { title: "5th Sem Notes Drive",         icon: "📂", url: "https://drive.google.com/placeholder-notes"     },
   { title: "PYQs & Solutions",            icon: "📝", url: "https://drive.google.com/placeholder-pyqs"      },
@@ -49,7 +49,7 @@ const quickLinks = [
   { title: "Tuition & Fees Portal",       icon: "💳", url: "https://accounts.iitr.ac.in/placeholder-fees"  },
 ];
 
-// ── Upcoming exams for 5th sem ──
+
 const exams = [
   { subject: "Process Equipment Design",                  date: "Nov 05", time: "9:00 AM",  room: "Exam Hall A",    duration: "3 hrs" },
   { subject: "Fundamentals of AI/ML",                     date: "Nov 08", time: "11:00 AM", room: "Exam Hall B",    duration: "3 hrs" },
@@ -58,7 +58,7 @@ const exams = [
   { subject: "Open Elective",                             date: "Nov 18", time: "10:00 AM", room: "Exam Hall A",    duration: "3 hrs" },
 ];
 
-// ── Weight scheme legend ──
+
 const weightScheme = [
   { label: "CWS", range: "10–35%", desc: "Continuous Weekly Sessions"  },
   { label: "PRS", range: "25–50%", desc: "Practical / Sessional"       },
@@ -67,7 +67,7 @@ const weightScheme = [
   { label: "PRE", range: "50%",    desc: "Practical End-Term"          },
 ];
 
-// ── Area badge colours ──
+
 const areaBadge = {
   PCC:   { bg: "#dbeafe", color: "#1d4ed8" },
   HSSEC: { bg: "#fce7f3", color: "#be185d" },
@@ -83,7 +83,7 @@ const typeBadge = {
   Enhancement: { bg: "#ede9fe", color: "#6d28d9" },
 };
 
-// ── Icons ──
+
 const IconExternal = () => (
   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -97,7 +97,7 @@ const IconLink  = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="no
 const IconFlask = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 3h6m-5 6-2.5 9.5A2 2 0 0 0 9.4 21h5.2a2 2 0 0 0 1.9-2.5L14 9"/><line x1="9" y1="3" x2="9" y2="9"/><line x1="15" y1="3" x2="15" y2="9"/></svg>;
 const IconInfo  = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>;
 
-// ── Pill badge helper ──
+
 const Pill = ({ label, style }) => (
   <span style={{ display: "inline-block", fontSize: "10px", fontWeight: 700, letterSpacing: "0.04em",
     padding: "2px 7px", borderRadius: "99px", ...style }}>{label}</span>
@@ -107,10 +107,10 @@ export default function Academics() {
   return (
     <div style={{ display: "flex", height: "calc(100vh - var(--header-height))", overflow: "hidden" }}>
 
-      {/* ── Main Content ── */}
+      
       <div style={{ flex: 1, overflowY: "auto", padding: "24px 28px" }}>
 
-        {/* Page Header */}
+        
         <div className="page-header">
           <h1 className="page-header__title">Academic Handbooks</h1>
           <p className="page-header__subtitle">
@@ -118,10 +118,10 @@ export default function Academics() {
           </p>
         </div>
 
-        {/* Row 1: Semester Progress + Quick Links */}
+        
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
 
-          {/* Semester Progress */}
+          
           <div className="card">
             <div className="card-header">
               <div className="card-header__title">
@@ -144,7 +144,7 @@ export default function Academics() {
               </div>
               <p style={{ fontSize: "11.5px", color: "var(--text-secondary)", fontStyle: "italic", marginBottom: "12px" }}>{phase}</p>
 
-              {/* Credit summary */}
+              
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "8px" }}>
                 {[
                   { label: "Total Credits", value: totalCredits },
@@ -160,7 +160,7 @@ export default function Academics() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div className="card">
             <div className="card-header">
               <div className="card-header__title"><IconLink /> Quick Links</div>
@@ -184,7 +184,7 @@ export default function Academics() {
           </div>
         </div>
 
-        {/* ── 5th Semester Courses ── */}
+        
         <div className="card" style={{ marginBottom: "16px" }}>
           <div className="card-header">
             <div className="card-header__title"><IconBook /> 5th Semester Courses</div>
@@ -222,7 +222,7 @@ export default function Academics() {
                   </td>
                 </tr>
               ))}
-              {/* Total row */}
+              
               <tr style={{ background: "var(--bg-input)" }}>
                 <td colSpan={4} style={{ fontWeight: 700, fontSize: "12px" }}>Total Credits</td>
                 <td style={{ textAlign: "center", fontWeight: 800, fontSize: "14px" }}>{totalCredits}</td>
@@ -232,10 +232,10 @@ export default function Academics() {
           </table>
         </div>
 
-        {/* Row 2: Upcoming Exams + Weight Scheme */}
+        
         <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: "16px", marginBottom: "16px" }}>
 
-          {/* Upcoming Exams */}
+          
           <div className="card">
             <div className="card-header">
               <div className="card-header__title"><IconCal /> Upcoming Examinations</div>
@@ -265,7 +265,7 @@ export default function Academics() {
             </table>
           </div>
 
-          {/* Evaluation Weight Scheme */}
+          
           <div className="card">
             <div className="card-header">
               <div className="card-header__title"><IconInfo /> Evaluation Scheme</div>
@@ -285,7 +285,7 @@ export default function Academics() {
           </div>
         </div>
 
-        {/* Lab & Practical Courses highlight */}
+        
         <div className="card" style={{ marginBottom: "16px" }}>
           <div className="card-header">
             <div className="card-header__title"><IconFlask /> Lab & Practical Breakdown</div>
@@ -308,7 +308,7 @@ export default function Academics() {
 
       </div>
 
-      {/* ── Right AI Panel ── */}
+      
       <div style={{ width: "280px", flexShrink: 0, borderLeft: "1px solid var(--border)", overflow: "hidden" }}>
         <AIPanel
           title="Academic Advisor"

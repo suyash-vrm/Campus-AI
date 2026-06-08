@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// ─── Public routes ─────────────────────────
+
 app.use("/api/auth", authRouter);
 
-// ─── Health check (public) ─────────────────
+
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
@@ -25,7 +25,6 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// ─── AI query (protected by JWT) ──────────
 app.post("/api/query", requireAuth, async (req, res) => {
   try {
     const { message, history = [] } = req.body;
