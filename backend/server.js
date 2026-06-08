@@ -11,7 +11,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: ["https://campus-ai-frontend-2-aj7laxc12-suyash-vrms-projects.vercel.app", "http://localhost:5173"],
+  origin: [
+    "https://campus-ai-frontend-2-66s7b8i4e-suyash-vrms-projects.vercel.app",
+    "http://localhost:5173"
+  ],
   allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"]
 }));
