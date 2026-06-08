@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors({
   origin: [
-    "https://campus-ai-frontend-2-66s7b8i4e-suyash-vrms-projects.vercel.app",
+    "https://campus-ai-frontend-2.vercel.app/",
     "http://localhost:5173"
   ],
   allowedHeaders: ["Content-Type", "Authorization"],
