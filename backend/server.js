@@ -10,14 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({
-  origin: [
-    "https://campus-ai-frontend-2.vercel.app/",
-    "http://localhost:5173"
-  ],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"]
-}));
+app.use(cors());
 app.use(express.json());
 
 
