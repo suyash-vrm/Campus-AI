@@ -189,7 +189,7 @@ export default function Library() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/query", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/query`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
